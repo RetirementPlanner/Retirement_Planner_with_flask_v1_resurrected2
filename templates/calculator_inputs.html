@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% set active_page = "inputs" %}
+
+{% block title %}Retirement Calculator{%endblock%}
+
+
+
+{% block content %}
+<H1> Create your retirement plan</H1>
+<h6>Tell us a bit about yourself and your finances.  We'll use this information to create a forecast of your finances into retirement</h6>
+   <div class="container col-xxl-12 px-1 py-1">
+    <div class="card card-body">
+
+
+                <form method="post"  action="{{url_for('calculator_inputs')}}" class="row g-3">
+                        {{form.csrf_token}}
+                    <h5 class="card-title">a) About You</h5>
+                    <div class="col-md-4">
+                        {{form.age_now_c.label(class="form-label")}}
+                        {{form.age_now_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-4">
+                        {{form.target_retirement_age_c.label(class_='form-label')}}
+                        {{form.target_retirement_age_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-4">
+                        {{form.target_income_pa_c.label(class_='form-label')}}
+                        {{form.target_income_pa_c(class_='form-control')}}
+                    </div>
+
+                    <h5 class="card-title">b) Your Pensions and Investments</h5>
+                    <div class="col-md-6">
+                        {{form.pension_value_now_c.label(class_='form-label')}}
+                        {{form.pension_value_now_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.planned_pension_contributions_pa_c.label(class_='form-label')}}
+                        {{form.planned_pension_contributions_pa_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.db_pension_income_c.label(class_='form-label')}}
+                        {{form.db_pension_income_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.db_pension_start_age_c.label(class_='form-label')}}
+                        {{form.db_pension_start_age_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.ISA_value_now_c.label(class_='form-label')}}
+                        {{form.ISA_value_now_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.planned_ISA_contributions_pa_c.label(class_='form-label')}}
+                        {{form.planned_ISA_contributions_pa_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.cash_savings_now_c.label(class_='form-label')}}
+                        {{form.cash_savings_now_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.planned_cash_savings_contributions_pa_c.label(class_='form-label')}}
+                        {{form.planned_cash_savings_contributions_pa_c(class_='form-control')}}
+                    </div>
+
+
+                    <h5 class="card-title">c) Your Home</h5>
+                    <div class="col-md-4">
+                        {{form.house_value_now_c.label(class_='form-label')}}
+                        {{form.house_value_now_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-4">
+                        {{form.mortgage_value_now_c.label(class_='form-label')}}
+                        {{form.mortgage_value_now_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-4">
+                        {{form.years_left_on_mortgage_c.label(class_='form-label')}}
+                        {{form.years_left_on_mortgage_c(class_='form-control')}}
+                     </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Detailed Results{%endblock%}
+
+
+
+{% block content %}
+
+
+<h1>Results Data  </h1>
+<p><a href={{url_for('results_summary')}}>Go back to results</a></p>
+
+{{table|safe}}
+
+
+{% endblock %}

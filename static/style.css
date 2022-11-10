@@ -1,0 +1,387 @@
+
+
+/* Additional styling on top of Bootstrap*/
+
+/*top margin of page*/
+body, html {
+margin-left:1%;
+margin-right:1%;
+margin-bottom:1%;
+margin-top:1%;
+}
+/*Padding above H5 items used in form*/
+H5 {
+  padding-top: 1%;
+}
+
+/*making canvas responsive*/
+canvas{
+width: 100%;
+height: auto;
+}
+
+
+/*not sure what this is!*/
+label {
+    width: 500px;
+    display: inline-block;
+}
+
+
+/*bootstrap styling for table applied to id*/
+
+#T_table_df {
+width: 100%;
+margin-bottom: 1rem;
+color: #212529;
+}
+
+#T_table_df th,
+#T_table_df td {
+padding: 0.75rem;
+vertical-align: top;
+border-top: 1px solid #dee2e6;
+}
+
+#T_table_df thead th {
+vertical-align: bottom;
+border-bottom: 2px solid #dee2e6;
+}
+
+#T_table_df tbody + tbody {
+border-top: 2px solid #dee2e6;
+}
+
+#T_table_df-sm th,
+#T_table_df-sm td {
+padding: 0.3rem;
+}
+
+#T-table_df-bordered {
+border: 1px solid #dee2e6;
+}
+
+#T_table_df-bordered th,
+#T_table_df-bordered td {
+border: 1px solid #dee2e6;
+}
+
+#T_table_df-bordered thead th,
+#T_table_df-bordered thead td {
+border-bottom-width: 2px;
+}
+
+#T-table_df-borderless th,
+#T_table_df-borderless td,
+#T_table_df-borderless thead th,
+#T_table_df-borderless tbody + tbody {
+border: 0;
+}
+
+#T_table_df-striped tbody tr:nth-of-type(odd) {
+background-color: rgba(0, 0, 0, 0.05);
+}
+
+#T_table_df-hover tbody tr:hover {
+color: #212529;
+background-color: rgba(0, 0, 0, 0.075);
+}
+
+#T_table_df-primary,
+#T_table_df-primary > th,
+#T_table_df-primary > td {
+background-color: #b8daff;
+}
+
+#T_table_df-primary th,
+#T_table_df-primary td,
+#T_table_df-primary thead th,
+#T_table_df-primary tbody + tbody {
+border-color: #7abaff;
+}
+
+#T_table_df-hover #T_table_df-primary:hover {
+background-color: #9fcdff;
+}
+
+#T_table_df-hover #T_table_df-primary:hover > td,
+#T_table_df-hover #T_table_df-primary:hover > th {
+background-color: #9fcdff;
+}
+
+#T_table_df-secondary,
+#T_table_df-secondary > th,
+#T_table_df-secondary > td {
+background-color: #d6d8db;
+}
+
+#T_table_df-secondary th,
+#T_table_df-secondary td,
+#T_table_df-secondary thead th,
+#T_table_df-secondary tbody + tbody {
+border-color: #b3b7bb;
+}
+
+#T_table_df-hover #T_table_df-secondary:hover {
+background-color: #c8cbcf;
+}
+
+#T_table_df-hover #T_table_df-secondary:hover > td,
+#T_table_df-hover #T_table_df-secondary:hover > th {
+background-color: #c8cbcf;
+}
+
+#T_table_df-success,
+#T_table_df-success > th,
+#T_table_df-success > td {
+background-color: #c3e6cb;
+}
+
+#T_table_df-success th,
+#T_table_df-success td,
+#T_table_df-success thead th,
+#T_table_df-success tbody + tbody {
+border-color: #8fd19e;
+}
+
+#T_table_df-hover #T_table_df-success:hover {
+background-color: #b1dfbb;
+}
+
+#T_table_df-hover #T_table_df-success:hover > td,
+#T_table_df-hover #T_table_df-success:hover > th {
+background-color: #b1dfbb;
+}
+
+#T_table_df-info,
+#T_table_df-info > th,
+#T_table_df-info > td {
+background-color: #bee5eb;
+}
+
+#T_table_df-info th,
+#T_table_df-info td,
+#T_table_df-info thead th,
+#T_table_df-info tbody + tbody {
+border-color: #86cfda;
+}
+
+#T_table_df-hover #T_table_df-info:hover {
+background-color: #abdde5;
+}
+
+#T_table_df-hover #T_table_df-info:hover > td,
+#T_table_df-hover #T_table_df-info:hover > th {
+background-color: #abdde5;
+}
+
+#T_table_df-warning,
+#T_table_df-warning > th,
+#T_table_df-warning > td {
+background-color: #ffeeba;
+}
+
+#T_table_df-warning th,
+#T_table_df-warning td,
+#T_table_df-warning thead th,
+#T_table_df-warning tbody + tbody {
+border-color: #ffdf7e;
+}
+
+#T_table_df-hover #T_table_df-warning:hover {
+background-color: #ffe8a1;
+}
+
+#T_table_df-hover #T_table_df-warning:hover > td,
+#T_table_df-hover #T_table_df-warning:hover > th {
+background-color: #ffe8a1;
+}
+
+#T_table_df-danger,
+#T_table_df-danger > th,
+#T_table_df-danger > td {
+background-color: #f5c6cb;
+}
+
+#T_table_df-danger th,
+#T_table_df-danger td,
+#T_table_df-danger thead th,
+#T_table_df-danger tbody + tbody {
+border-color: #ed969e;
+}
+
+#T_table_df-hover #T_table_df-danger:hover {
+background-color: #f1b0b7;
+}
+
+#T_table_df-hover #T_table_df-danger:hover > td,
+#T_table_df-hover #T_table_df-danger:hover > th {
+background-color: #f1b0b7;
+}
+
+#T_table_df-light,
+#T_table_df-light > th,
+#T_table_df-light > td {
+background-color: #fdfdfe;
+}
+
+#T_table_df-light th,
+#T_table_df-light td,
+#T_table_df-light thead th,
+#T_table_df-light tbody + tbody {
+border-color: #fbfcfc;
+}
+
+#T_table_df-hover #T_table_df-light:hover {
+background-color: #ececf6;
+}
+
+#T_table_df-hover #T_table_df-light:hover > td,
+#T_table_df-hover #T_table_df-light:hover > th {
+background-color: #ececf6;
+}
+
+#T_table_df-dark,
+#T_table_df-dark > th,
+#T_table_df-dark > td {
+background-color: #c6c8ca;
+}
+
+#T_table_df-dark th,
+#T_table_df-dark td,
+#T_table_df-dark thead th,
+#T_table_df-dark tbody + tbody {
+border-color: #95999c;
+}
+
+#T_table_df-hover #T_table_df-dark:hover {
+background-color: #b9bbbe;
+}
+
+#T_table_df-hover #T_table_df-dark:hover > td,
+#T_table_df-hover #T_table_df-dark:hover > th {
+background-color: #b9bbbe;
+}
+
+#T_table_df-active,
+#T_table_df-active > th,
+#T_table_df-active > td {
+background-color: rgba(0, 0, 0, 0.075);
+}
+
+#T_table_df-hover #T_table_df-active:hover {
+background-color: rgba(0, 0, 0, 0.075);
+}
+
+#T_table_df-hover #T_table_df-active:hover > td,
+#T_table_df-hover #T_table_df-active:hover > th {
+background-color: rgba(0, 0, 0, 0.075);
+}
+
+#T_table_df .thead-dark th {
+color: #fff;
+background-color: #343a40;
+border-color: #454d55;
+}
+
+#T_table_df .thead-light th {
+color: #495057;
+background-color: #e9ecef;
+border-color: #dee2e6;
+}
+
+#T_table_df-dark {
+color: #fff;
+background-color: #343a40;
+}
+
+#T_table_df-dark th,
+#T_table_df-dark td,
+#T_table_df-dark thead th {
+border-color: #454d55;
+}
+
+#T_table_df-dark#T_table_df-bordered {
+border: 0;
+}
+
+#T_table_df-dark#T_table_df-striped tbody tr:nth-of-type(odd) {
+background-color: rgba(255, 255, 255, 0.05);
+}
+
+#T_table_df-dark#T_table_df-hover tbody tr:hover {
+color: #fff;
+background-color: rgba(255, 255, 255, 0.075);
+}
+
+@media (max-width: 575.98px) {
+#T_table_df-responsive-sm {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+#T_table_df-responsive-sm > #T_table_df-bordered {
+border: 0;
+}
+}
+
+@media (max-width: 767.98px) {
+#T_table_df-responsive-md {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+#T_table_df-responsive-md > #T_table_df-bordered {
+border: 0;
+}
+}
+
+@media (max-width: 991.98px) {
+#T_table_df-responsive-lg {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+#T_table_df-responsive-lg > #T_table_df-bordered {
+border: 0;
+}
+}
+
+@media (max-width: 1199.98px) {
+#T_table_df-responsive-xl {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+#T_table_df-responsive-xl > #T_table_df-bordered {
+border: 0;
+}
+}
+
+#T_table_df-responsive {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+#T_table_df-responsive > #T_table_df-bordered {
+border: 0;
+}
+
+#T_table_df-responsive {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+#T_table_df-responsive > #T_table_df-bordered {
+border: 0;
+}
+
+

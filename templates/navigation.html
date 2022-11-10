@@ -1,0 +1,27 @@
+{% set navigation_bar = [
+    ('/calculator_inputs', 'inputs', 'Your Details'),
+    ('/results_summary', 'results', 'Results'),
+    ('/insights', 'insights', 'Insights'),
+    ('/assumptions_form', 'assumptions', 'Assumptions')
+] -%}
+{% set active_page = active_page|default('Home') -%}
+
+
+<header class="container col-xxl-16">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('home_page')}}">Wealthscanner</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {% for href, id, caption in navigation_bar %}
+                    <li class="nav-item"><a class="nav-link {% if id == active_page %}active" aria_current="page{% endif%}" href="{{ href|e }}">{{ caption|e }}</a></li>
+                    {% endfor %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

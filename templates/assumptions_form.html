@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% set active_page = "assumptions" %}
+
+{% block title %}Assumptions{%endblock%}
+
+
+{% block content %}
+
+<H2> Assumptions</H2>
+<br>
+<div class="container col-xxl-12 px-1 py-1">
+<ul>
+    <li>The calculator is in today's money - ie net of inflation</li>
+    <li>We assume that customer draws income from cash buffer that is replemished by selling down investments</li>
+    <li>We assume that the user will first draw down on other investments before drawing down pension funds</li>
+    <li>We assume that the user draws a pension commencement lump sum of 25% of the value of the pension on retirement, and reinvests this money into his/her ISA</li>
+    <li>If the user owns their property we assume that he/she draws on equity from this property if/when pension funds run out</li>
+</ul>
+<br>
+<H4>Calculator Settings</H4>
+            <form method="post"  action="{{url_for('assumptions_form')}}" class="row g-3">
+                        {{form.csrf_token}}
+                    <h5 class="card-title">a) Investment performance</h5>
+                    <div class="col-md-4">
+                        {{form.yearly_planned_returns_c.label(class="form-label")}}
+                        {{form.yearly_planned_returns_c(class_='form-control')}}
+                    </div>
+
+                    <h5 class="card-title">b) Property </h5>
+                    <div class="col-md-6">
+                        {{form.hpi_growth_c.label(class_='form-label')}}
+                        {{form.hpi_growth_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.mortgage_interest_rate_c.label(class_='form-label')}}
+                        {{form.mortgage_interest_rate_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.equity_release_rate_c.label(class_='form-label')}}
+                        {{form.equity_release_rate_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.ER_Max_LTV_c.label(class_='form-label')}}
+                        {{form.ER_Max_LTV_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.buffer_multiple_c.label(class_='form-label')}}
+                        {{form.buffer_multiple_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.drawdown_adjustment_factor_c.label(class_='form-label')}}
+                        {{form.drawdown_adjustment_factor_c(class_='form-control')}}
+                    </div>
+
+                    <div class="col-md-6">
+                        {{form.buffer_lead_time_c.label(class_='form-label')}}
+                        {{form.buffer_lead_time_c(class_='form-control')}}
+                    </div>
+
+                <div class="col-12">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+                </br>
+
+            <p><a href={{url_for('results_summary')}}>Go back to results</a></p>
+</div>
+{% endblock %}

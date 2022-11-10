@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Retirement Calculator{%endblock%}
+
+
+
+{% block content %}
+
+<div class="container col-xxl-12 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-12 col-lg-6">
+        <img src="{{url_for('static', filename='Couple_ipad_large.jpg')}}" class="d-block mx-lg-auto img-fluid" alt="Screenshot" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Plan your financial future</h1>
+        <p class="lead">Get control of your finances and get ready for retirement</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a class="btn btn-primary btn-lg px-4 me-md-2" href="{{url_for("calculator_inputs")}}">Create your free plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- START THE FEATURETTES -->
+  <div class="container marketing">
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Forecast your net wealth </h2>
+        <p class="lead">See how the value of your pension, investments and property could grow</p>
+      </div>
+      <div class="col-md-5">
+       <img src="{{url_for('static', filename='investments_screenshot.png')}}" class="d-block mx-lg-auto img-fluid" alt="Screenshot" width="700" height="500" loading="lazy">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Explore different strategies for retirement </h2>
+        <p class="lead">Test different ways of drawing down your pension vs other assets - and how it impacts your tax bill </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{{url_for('static', filename='Gross_Income_screenshot.png')}}" class="d-block mx-lg-auto img-fluid" alt="Screenshot" width="700" height="500" loading="lazy">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Test your plan against a market downturn </h2>
+        <p class="lead">Test your plan against economic shocks.   See how it would have performed historically</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{{url_for('static', filename='stock_market_crash.png')}}" class="d-block mx-lg-auto img-fluid" alt="Screenshot" width="700" height="500" loading="lazy">
+
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Get expert help</h2>
+        <p class="lead">Get help from an expert if you need it - over chat, phone or video call.  (Additional fees apply)</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{{url_for('static', filename='people_network_rectangular.png')}}" class="d-block mx-lg-auto img-fluid" alt="Screenshot" width="600" height="400" loading="lazy">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+  </div>
+
+{% endblock %}
